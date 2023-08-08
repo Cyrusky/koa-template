@@ -1,0 +1,23 @@
+/*
+ * Copyright (c) 2022. .
+ * Author: Cyrusky <bo.jin@borgor.cn>.
+ */
+
+import pkg from "./package.json";
+
+module.exports = {
+  apps: [
+    {
+      name: pkg.name, // 应用程序名称
+      script: "src/index.ts", // 应用程序的脚本路径
+      cwd: "./", // 根目录
+      instances: 1, // 应用启动实例个数，仅在cluster模式有效，默认为fork；
+      exec_mode: "cluster", // 应用程序启动模式，支持fork和cluster模式，默认是fork；
+      error_file: "/dev/null", // 不要错误日志
+      out_file: "/dev/null", // 不要日志文件
+      max_restarts: 10,
+      instance_var: "INSTANCE_ID",
+      watch: true,
+    },
+  ],
+};

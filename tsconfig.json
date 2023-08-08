@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "target": "es2017",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "outDir": "./dist",
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "sourceMap": false,
+    "experimentalDecorators": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "strictPropertyInitialization": false,
+    "allowJs": true
+  },
+  "exclude": [],
+  "include": [
+    "./src/**/*.ts",
+    "pm2.config.js"
+  ]
+}
