@@ -8,9 +8,10 @@ import Router from "koa-router";
 import { TestController } from "@/controller/TestController";
 
 const router = new Router({
-  prefix: "/user",
+  prefix: "/test",
 });
 
-router.get("/mini-code", TestController.getParamWeChatCode);
+router.get("/sign", TestController.getParamWeChatCode);
+router.get("/verify", TestController.verifyJwtCodeIsCorrect);
 
 export default router;

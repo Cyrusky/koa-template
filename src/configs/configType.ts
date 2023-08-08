@@ -11,8 +11,9 @@ export interface ConfigType {
   };
   jwt: {
     header: string;
-    expiresInAmount: number;
+    expiresIn: number;
     expiresInUnit: moment.unitOfTime.DurationConstructor;
+    secret: string;
     certificates: {
       dir: string;
       privateKeyName: string;

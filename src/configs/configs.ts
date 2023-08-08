@@ -10,15 +10,16 @@ export const configs: ConfigType = {
   jwt: {
     certificates: {
       dir: path.resolve(process.cwd(), "certs"),
-      privateKeyName: "private.key",
-      publicKeyName: "public.key",
+      privateKeyName: "rsa_private_key.pem",
+      publicKeyName: "rsa_public_key.pem",
     },
-    expiresInAmount: 1,
+    secret: "ay+)6cYAZ&&HI)3ch$(ZtJ^TmHWrQE)hFi0JWsJh$8V^DIxYl_5Hj1gXbvPJV",
+    expiresIn: 1,
     expiresInUnit: "d",
-    header: "X-Access-Token",
+    header: "X-Auth-Token",
   },
   server: {
     bind: "127.0.0.1",
-    port: 7999,
+    port: 3000,
   },
 };

@@ -17,12 +17,16 @@ import { LoggerMiddleware } from "@/utils/logger";
 
 const app = new Koa();
 
-app.use(Exceptions.middleware);
 app.use(LoggerMiddleware);
+app.use(Exceptions.middleware);
 app.use(koa_cors());
 app.use(bodyParser());
 app.use(koa_json());
-app.use(JwtUtils.middleware({}));
+app.use(
+  JwtUtils.middleware({
+    ignorePattern: [/^\/swagger/, /^\/api-docs/, /^\/test\/sign/],
+  }),
+);
 
 if (fs.existsSync(path.resolve(__dirname, "./router"))) {
   fs.readdirSync(path.resolve(__dirname, "./router")).forEach((file) => {
