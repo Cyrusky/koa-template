@@ -13,6 +13,7 @@
     "emitDecoratorMetadata": true,
     "strictPropertyInitialization": false,
     "allowJs": true,
+    "baseUrl": "./",
     "paths": {
       "@/*": [
         "src/*"
@@ -22,6 +23,7 @@
   "exclude": [],
   "include": [
     "./src/**/*.ts",
-    "pm2.config.js"
+    "pm2.config.js",
+    "./build/**/*.ts",
   ]
 }

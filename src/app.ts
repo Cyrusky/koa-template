@@ -3,14 +3,12 @@
  * Author: Cyrusky <bo.jin@borgor.cn>.
  */
 
-import fs from "fs";
 import Koa from "koa";
 import bodyParser from "koa-bodyparser";
 import koa_json from "koa-json";
-import type Router from "koa-router";
 import koa_cors from "koa2-cors";
-import path from "path";
 
+import { routers } from "@/router";
 import { Exceptions } from "@/utils/Exceptions";
 import { JwtUtils } from "@/utils/jwt";
 import { LoggerMiddleware } from "@/utils/logger";
@@ -24,15 +22,12 @@ app.use(bodyParser());
 app.use(koa_json());
 app.use(
   JwtUtils.middleware({
-    ignorePattern: [/^\/swagger/, /^\/api-docs/, /^\/test\/sign/],
+    ignorePattern: [/^\/test\/sign/],
   }),
 );
 
-if (fs.existsSync(path.resolve(__dirname, "./router"))) {
-  fs.readdirSync(path.resolve(__dirname, "./router")).forEach((file) => {
-    // eslint-disable-next-line @typescript-eslint/no-var-requires
-    const route: Router = require(path.join(__dirname, "router", file)).default;
-    app.use(route.routes()).use(route.allowedMethods());
-  });
-}
+routers.forEach((router) => {
+  app.use(router.routes()).use(router.allowedMethods());
+});
+
 export default app;

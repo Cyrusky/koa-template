@@ -33,6 +33,10 @@ export class LogService {
       : log4js.getLogger("accessError");
   }
 
+  get build(): Logger {
+    return log4js.getLogger("default");
+  }
+
   async LogMiddleWare(ctx: Context, next: Next) {
     this.access.info(`${ctx.method} ${ctx.url}`);
     const start = new Date();

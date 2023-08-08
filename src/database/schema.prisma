@@ -1,0 +1,26 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider      = "prisma-client-js"
+  binaryTargets = ["native", "linux-musl", "debian-openssl-1.1.x"]
+  output        = "./client"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Membership {
+  id  String @id @unique @default(uuid())
+  sku String @unique @default(dbgenerated("'MS-' || to_char(random() * 100000000, 'fm09999999')"))
+
+  email     String
+  phone     String
+  coupon    String
+  type      Int       @default(1)
+  expired   Boolean   @default(true)
+  createdAt DateTime? @db.Timestamp
+  expiredAt DateTime? @db.Timestamp
+}
