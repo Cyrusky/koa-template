@@ -3,7 +3,7 @@ import "./loggerConfig";
 import type Koa from "koa";
 import { type Context, type Next } from "koa";
 
-import { Services } from "../../services";
+import { Services } from "@/services";
 
 export * from "./LogService";
 

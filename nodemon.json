@@ -8,6 +8,6 @@
   "watch": [
     "src"
   ],
-  "exec": "ts-node bin/www",
+  "exec": "ts-node -r tsconfig-paths/register src/index.ts",
   "ext": "ts, *"
 }

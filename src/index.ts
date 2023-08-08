@@ -1,13 +1,13 @@
 import "dotenv/config";
 import "reflect-metadata";
-import "./services/register";
+import "@/services/register";
 
 import { createServer } from "http";
 import { type AddressInfo } from "net";
 import * as process from "process";
 
-import app from "./app";
-import { Services } from "./services";
+import app from "@/app";
+import { Services } from "@/services";
 
 const { LogService } = Services;
 

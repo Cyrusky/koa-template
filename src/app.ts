@@ -11,8 +11,8 @@ import type Router from "koa-router";
 import koa_cors from "koa2-cors";
 import path from "path";
 
-import { JwtMiddleware } from "./utils/jwt";
-import { LoggerMiddleware } from "./utils/logger";
+import { JwtMiddleware } from "@/utils/jwt";
+import { LoggerMiddleware } from "@/utils/logger";
 
 const app = new Koa();
 

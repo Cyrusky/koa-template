@@ -1,6 +1,6 @@
 import { type Context, type Middleware, type Next } from "koa";
 
-import { Services } from "../../services";
+import { Services } from "@/services";
 
 const { LogService } = Services;
 

@@ -2,7 +2,7 @@ import { type Context, type Next } from "koa";
 import log4js, { type Logger } from "log4js";
 import { Service } from "typedi";
 
-import { ServicesNames } from "../../constants/services";
+import { ServicesNames } from "@/constants/services";
 
 const isDev = process.env.NODE_ENV === "development";
 

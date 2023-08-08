@@ -12,7 +12,12 @@
     "removeComments": true,
     "emitDecoratorMetadata": true,
     "strictPropertyInitialization": false,
-    "allowJs": true
+    "allowJs": true,
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    }
   },
   "exclude": [],
   "include": [
