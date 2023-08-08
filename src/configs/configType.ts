@@ -1,6 +1,7 @@
 import type moment from "moment";
 
 export interface ConfigType {
+  isDev: boolean;
   server: {
     bind: string;
     port: number;

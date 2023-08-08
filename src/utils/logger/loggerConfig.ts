@@ -1,7 +1,9 @@
 import log4js, { levels } from "log4js";
 import path from "path";
 
-const logPath = process.env.LOG_PATH ?? "./logs";
+import { config } from "@/configs";
+
+const logPath = config.log.path ?? "./logs";
 
 log4js.configure({
   appenders: {

@@ -7,16 +7,17 @@ import { type AddressInfo } from "net";
 import * as process from "process";
 
 import app from "@/app";
+import { config } from "@/configs";
 import { Services } from "@/services";
 
 const { LogService } = Services;
 
 const server = createServer(app.callback());
 
-const port = Number.isNaN(Number(process.env.PORT))
+const port = Number.isNaN(Number(config.server.port))
   ? 3000
-  : Number(process.env.PORT);
-const bind = process.env.BIND ?? "127.0.0.1";
+  : Number(config.server.port);
+const bind = config.server.bind ?? "127.0.0.1";
 
 const onError = (error: Error): void => {
   const listen = `${bind}:${port}`;

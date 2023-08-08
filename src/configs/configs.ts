@@ -3,6 +3,7 @@ import path from "path";
 import { type ConfigType } from "@/configs/configType";
 
 export const configs: ConfigType = {
+  isDev: true,
   log: {
     path: path.resolve(process.cwd(), "logs"),
   },

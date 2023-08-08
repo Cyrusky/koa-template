@@ -1,11 +1,12 @@
 import { type Context, type Middleware, type Next } from "koa";
 import { isUndefined } from "lodash";
 
+import { config } from "@/configs";
 import { Services } from "@/services";
 
 const { LogService } = Services;
 
-const jwtHeaderKey = process.env.JWT_HEADER ?? "X-Auth-Token";
+const jwtHeaderKey = config.jwt.header ?? "X-Auth-Token";
 
 interface JwtMiddlewareOptions {
   ignorePattern?: RegExp[] | RegExp;

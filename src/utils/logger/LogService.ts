@@ -2,9 +2,10 @@ import { type Context, type Next } from "koa";
 import log4js, { type Logger } from "log4js";
 import { Service } from "typedi";
 
+import { config } from "@/configs";
 import { ServicesNames } from "@/constants/services";
 
-const isDev = process.env.NODE_ENV === "development";
+const isDev = config.isDev;
 
 @Service(ServicesNames.LogService)
 export class LogService {
