@@ -8,5 +8,9 @@ This is a template for a Koa2 server with a few useful features:
 - [x] Nodemon
 - [x] Log4js
 - [x] Koa-router
-- [x] Joi
 - [x] ESBuild
+- [x] Full Typescript support
+- [x] TypeDI support
+- [ ] TypeORM support
+- [ ] GraphQL & Prisma Support
+- [ ] Joi

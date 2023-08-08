@@ -11,16 +11,18 @@ import type Router from "koa-router";
 import koa_cors from "koa2-cors";
 import path from "path";
 
-import { JwtMiddleware } from "@/utils/jwt";
+import { Exceptions } from "@/utils/Exceptions";
+import { JwtUtils } from "@/utils/jwt";
 import { LoggerMiddleware } from "@/utils/logger";
 
 const app = new Koa();
 
+app.use(Exceptions.middleware);
 app.use(LoggerMiddleware);
 app.use(koa_cors());
 app.use(bodyParser());
 app.use(koa_json());
-app.use(JwtMiddleware);
+app.use(JwtUtils.middleware({}));
 
 if (fs.existsSync(path.resolve(__dirname, "./router"))) {
   fs.readdirSync(path.resolve(__dirname, "./router")).forEach((file) => {
