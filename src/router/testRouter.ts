@@ -1,7 +1,7 @@
-/*
- * Copyright (c) 2022. .
- * Author: Cyrusky <bo.jin@borgor.cn>.
- */
+/*************************************************
+ * Copyright (c) 2023.
+ * Author: Cyrusky <bo.jin@borgor.cn>
+ *************************************************/
 
 import Router from "koa-router";
 

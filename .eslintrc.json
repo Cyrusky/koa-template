@@ -10,7 +10,8 @@
   "plugins": [
     "simple-import-sort",
     "@typescript-eslint",
-    "prettier"
+    "prettier",
+    "header"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -27,7 +28,17 @@
     "import/first": "off",
     "@typescript-eslint/strict-boolean-expressions": "off",
     "@typescript-eslint/explicit-function-return-type": "off",
-    "@typescript-eslint/no-extraneous-class": "off"
+    "@typescript-eslint/no-extraneous-class": "off",
+    "header/header": [
+      2,
+      "block",
+      [
+        "************************************************",
+        " * Copyright (c) 2023.",
+        " * Author: Cyrusky <bo.jin@borgor.cn>",
+        " ************************************************"
+      ]
+    ]
   }
 }
 

@@ -1,3 +1,7 @@
+/*************************************************
+ * Copyright (c) 2023.
+ * Author: Cyrusky <bo.jin@borgor.cn>
+ *************************************************/
 import { esbuildDecorators } from "@anatine/esbuild-decorators";
 import { build } from "esbuild";
 import { aliasPath } from "esbuild-plugin-alias-path";

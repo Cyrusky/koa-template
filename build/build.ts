@@ -1,3 +1,7 @@
+/*************************************************
+ * Copyright (c) 2023.
+ * Author: Cyrusky <bo.jin@borgor.cn>
+ *************************************************/
 import "reflect-metadata";
 import "@/services/register";
 import "@/utils/logger/loggerConfig";
@@ -16,7 +20,7 @@ const { LogService } = Services;
 const mainBuilder = async () => {
   const tsconfig = path.resolve(__dirname, "../tsconfig.json");
   const entryPoints = [path.resolve(__dirname, "../src/index.ts")];
-  const distPath = path.resolve(__dirname, "../dist");
+  const distPath = path.resolve(__dirname, "../bin");
   const outfile = path.resolve(distPath, "index.js");
   const databaseEnginePath = path.resolve(__dirname, "../src/database/client");
   const startTime = performance.now();

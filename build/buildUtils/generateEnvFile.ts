@@ -1,3 +1,7 @@
+/*************************************************
+ * Copyright (c) 2023.
+ * Author: Cyrusky <bo.jin@borgor.cn>
+ *************************************************/
 import { Services } from "@/services";
 
 const { LogService } = Services;

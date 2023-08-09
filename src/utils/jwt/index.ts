@@ -1,3 +1,7 @@
+/*************************************************
+ * Copyright (c) 2023.
+ * Author: Cyrusky <bo.jin@borgor.cn>
+ *************************************************/
 import fs from "fs";
 import jsonwebtoken from "jsonwebtoken";
 import { type Context, type Middleware, type Next } from "koa";

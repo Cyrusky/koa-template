@@ -1,3 +1,7 @@
+/*************************************************
+ * Copyright (c) 2023.
+ * Author: Cyrusky <bo.jin@borgor.cn>
+ *************************************************/
 import { merge } from "lodash";
 
 import { devConfig } from "@/configs/config.dev";

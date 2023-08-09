@@ -1,15 +1,7 @@
-/**
- * File: ResponseBeautifier.ts
- * Path: /src/utils/ResponseBeautifier.ts
- * Created Date: 2022-05-03  23:00:01 pm
- * Author: Bo.Jin (bo.jin@borgor.cn)
- * -----
- * Last Modified: Bo.Jin (bo.jin@borgor.cn)
- * Modified By: 2022-05-15 12:35:06 pm
- * ------------------------------------
- * Copyright (c) 2022 BorGor.cn
- * ------------------------------------
- */
+/*************************************************
+ * Copyright (c) 2023.
+ * Author: Cyrusky <bo.jin@borgor.cn>
+ *************************************************/
 
 import { type Context } from "koa";
 

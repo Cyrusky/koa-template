@@ -1,6 +1,6 @@
 .idea
 logs/
-dist/
+bin/
 .env
 node_modules
 

@@ -1,3 +1,8 @@
+/*************************************************
+ * Copyright (c) 2023.
+ * Author: Cyrusky <bo.jin@borgor.cn>
+ *************************************************/
+
 import "dotenv/config";
 import "reflect-metadata";
 import "@/services/register";

@@ -1,3 +1,7 @@
+/*************************************************
+ * Copyright (c) 2023.
+ * Author: Cyrusky <bo.jin@borgor.cn>
+ *************************************************/
 export const ResponseInfo = {
   success: { code: 200, message: "成功!" }, // 正常返回
   badRequest: { code: 400, message: "错误请求!" }, // 表示其他错误，就是4xx都无法描述的错误

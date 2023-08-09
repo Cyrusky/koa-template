@@ -1,3 +1,7 @@
+/*************************************************
+ * Copyright (c) 2023.
+ * Author: Cyrusky <bo.jin@borgor.cn>
+ *************************************************/
 import { type Context, type Next } from "koa";
 import log4js, { type Logger } from "log4js";
 import { Service } from "typedi";
