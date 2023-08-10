@@ -17,12 +17,9 @@ enum Method {
   PATCH = "patch",
   OPTIONS = "options",
 }
-const METHOD_METADATA = "method";
-const PATH_METADATA = "path";
+
 export const Controller = (path: string): ClassDecorator => {
-  return (target) => {
-    Reflect.defineMetadata(PATH_METADATA, path, target);
-  };
+  return (target) => {};
 };
 
 const createMappingDecorator = (method: string) => (path: string) => {
@@ -31,6 +28,10 @@ const createMappingDecorator = (method: string) => (path: string) => {
     key: string,
     ...args: any[]
   ) => {
+    if (typeof target === "object") {
+    } else {
+      const fn = target[key];
+    }
     console.log(target, key);
     // Reflect.defineMetadata(PATH_METAD；ATA, path, descriptor.value);
     // Reflect.defineMetadata(METHOD_METADATA, method, descriptor.value);

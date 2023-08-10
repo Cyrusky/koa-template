@@ -5,3 +5,4 @@
 import "reflect-metadata";
 import "@/utils/logger/LogService";
 import "@/database/DatabaseService";
+import "@/utils/router/RouterService";
