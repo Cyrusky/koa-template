@@ -9,25 +9,28 @@
     "esModuleInterop": true,
     "sourceMap": false,
     "experimentalDecorators": true,
-    "removeComments": true,
     "emitDecoratorMetadata": true,
+    "removeComments": true,
     "strictPropertyInitialization": false,
     "allowJs": true,
     "baseUrl": "./",
     "paths": {
       "@/*": [
         "src/*"
+      ],
+      "@@/*": [
+        "typings/*"
       ]
     },
     "typeRoots": [
-      "node_modules/@types",
-      "src/typings"
-    ],
+      "./node_modules/@types",
+      "./typings"
+    ]
   },
   "exclude": [],
   "include": [
     "./src/**/*.ts",
     "pm2.config.js",
-    "./build/**/*.ts",
+    "./build/**/*.ts"
   ]
 }

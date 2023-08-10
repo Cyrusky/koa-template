@@ -2,16 +2,19 @@
  * Copyright (c) 2023.
  * Author: Cyrusky <bo.jin@borgor.cn>
  *************************************************/
-import { type Context, type Next } from "koa";
+import { Response } from "@/utils/ResponseUtils";
+import { Controller, Get } from "@/utils/router";
+import { type ApiMiddleware } from "@@/types";
 
-import { ResponseBeautifier } from "@/utils/ResponseUtils";
-
+@Controller("/test")
 export class TestController {
-  public static async getParamWeChatCode(ctx: Context, next: Next) {
-    ResponseBeautifier.success(ctx, { status: "success" });
-  }
+  @Get("/wechat-applet-auth")
+  public static getParamWeChatCode: ApiMiddleware = async (ctx, next) => {
+    ctx.body = Response.success({
+      name: "Cyrusky",
+    });
+  };
 
-  public static async verifyJwtCodeIsCorrect(ctx: Context, next: Next) {
-    ResponseBeautifier.success(ctx, { status: "success" });
-  }
+  @Get("/wechat-applet-auth1")
+  public verifyJwtCodeIsCorrect: ApiMiddleware = (ctx, next) => {};
 }

@@ -8,6 +8,9 @@ import { type ConfigType } from "@/configs/configType";
 
 export const configs: ConfigType = {
   isDev: true,
+  router: {
+    prefix: "/",
+  },
   log: {
     path: path.resolve(process.cwd(), "logs"),
   },

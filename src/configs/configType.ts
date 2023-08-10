@@ -6,6 +6,9 @@ import type moment from "moment";
 
 export interface ConfigType {
   isDev: boolean;
+  router: {
+    prefix: string;
+  };
   server: {
     bind: string;
     port: number;

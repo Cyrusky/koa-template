@@ -9,8 +9,7 @@ import { isUndefined } from "lodash";
 import path from "path";
 
 import { config } from "@/configs";
-import { ResponseInfo } from "@/constants/responses";
-import { ResponseBeautifier } from "@/utils/ResponseUtils";
+import { Response } from "@/utils/ResponseUtils";
 
 const jwtHeaderKey = (config.jwt.header ?? "X-Auth-Token").toLowerCase();
 
@@ -60,16 +59,12 @@ export class JwtUtils {
         }
       }
       if (!ctx.headers[jwtHeaderKey]) {
-        ResponseBeautifier.responseByStatus(
-          ctx,
-          ResponseInfo.parameterError,
-          "auth token not found",
-        );
+        Response.tokenError("auth token not found");
       } else {
         if (JwtUtils.verify(ctx.headers[jwtHeaderKey] as string)) {
           await next();
         } else {
-          ResponseBeautifier.responseByStatus(ctx, ResponseInfo.tokenError);
+          Response.tokenError();
         }
       }
     };
